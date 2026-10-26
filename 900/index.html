@@ -271,7 +271,24 @@
         if (document.getElementById("passCounter")) document.getElementById("passCounter").innerHTML = localStorage.passcount;
         if (document.getElementById("failCounter")) document.getElementById("failCounter").innerHTML = localStorage.failcount;
     </script>
-
+<style>
+/* Luffy background for main page */
+body{
+background: url('./luffy.jpg') center/cover no-repeat fixed !important;
+}
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background: rgba(0,0,0,0.60);
+pointer-events:none;
+z-index:0;
+}
+.text, .title, .payloads, #console, button, a{
+position:relative !important;
+z-index:5 !important;
+}
+</style>
 <!-- PSPulse support link: intentionally lightweight for the PS4 browser. -->
 <style id="pspulse-support-style">
 .pspulse-support{position:fixed;right:18px;bottom:18px;z-index:2147483647;display:block;padding:10px 15px;border:1px solid #9b87ff;border-radius:4px;background:#17151f;color:#b7a9ff!important;font:600 13px Arial,sans-serif;letter-spacing:.2px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.32)}
