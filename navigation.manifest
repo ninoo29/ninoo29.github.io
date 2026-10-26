@@ -1,15 +1,19 @@
-CACHE MANIFEST
-# version-label-audit-20261021-v5-ninoo
-# navigation-v1-20261021: menu only; host caches install separately
-
-CACHE:
-./
-index.html
-pspulse.png
-700/version-selector.html
-900/version-selector.html
-900/luffy.jpg
-css/version-selector.html
-
-NETWORK:
-*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PS4 9.00</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;background:#000;overflow:hidden}
+body{background:url('luffy.jpg') center/cover no-repeat}
+#box{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);border:2px solid gold;border-radius:15px;padding:25px 35px;text-align:center}
+#box h2{color:#fff;margin:0 0 20px 0;font-family:Arial}
+#ok{padding:10px 40px;background:gold;color:#000;border:none;border-radius:8px;font-weight:bold;font-size:18px}
+#name{position:fixed;right:10px;bottom:10px;background:rgba(0,0,0,0.6);color:gold;padding:5px 10px;border-radius:5px;font-family:Arial;font-size:13px}
+</style>
+</head>
+<body>
+<div id="box"><h2>This Is For PS4 FW 9.xx</h2><button id="ok" onclick="location.href='index.html'">موافق</button></div>
+<div id="name">صالة عمر نينو - 07701690121</div>
+</body>
+</html>
