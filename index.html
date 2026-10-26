@@ -18,7 +18,21 @@
             --accent: #a294ff;
             --accent-dim: #6f63a8;
         }
-
+  19      --accent-dim: #6f63a8;
+  20  }
+  21  html, body {
+  22    background: url('bg.jpg') no-repeat center center fixed !important;
+  23    background-size: cover !important;
+  24  }
+  25  body::before {
+  26    content: "";
+  27    position: fixed;
+  28    top: 0; left: 0;
+  29    width: 100%; height: 100%;
+  30    background: rgba(0,0,0,0.65);
+  31    z-index: -1;
+  32  }
+  33  * { box-sizing: border-box; }
         * { box-sizing: border-box; }
         html { background: var(--bg); }
         html, body { margin: 0; min-height: 100%; }
