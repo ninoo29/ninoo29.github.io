@@ -1,24 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" manifest="../navigation.manifest">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>PS4 9.00</title>
+<meta charset="utf-8">
+<title>صالة عمر نينو</title>
 <style>
-html,body{margin:0;padding:0;width:100%;height:100%;background:#000;overflow:hidden;font-family:Arial}
-#bg{position:fixed;left:0;top:0;width:100%;height:100%;background:url('luffy.jpg') center/cover no-repeat}
-#popup{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);border:2px solid gold;border-radius:15px;padding:25px 35px;text-align:center;z-index:100}
-#popup h2{color:#fff;margin:0 0 20px 0;font-size:22px}
-#ok{padding:10px 40px;background:gold;color:#000;border:none;border-radius:8px;font-weight:bold;font-size:18px;cursor:pointer}
-#name{position:fixed;right:15px;bottom:20px;background:rgba(0,0,0,0.6);color:gold;padding:6px 12px;border-radius:6px;font-size:14px}
+body{
+margin:0;
+background:url('luffy.jpg') center/cover no-repeat fixed;
+color:white;
+font-family:sans-serif;
+}
+.overlay{
+background:rgba(0,0,0,0.55);
+min-height:100vh;
+padding:20px;
+}
+.versions{
+display:flex;
+gap:20px;
+justify-content:center;
+margin-top:80px;
+flex-wrap:wrap;
+}
+.card{
+background:rgba(0,0,0,0.7);
+border:2px solid #00aaff;
+border-radius:15px;
+padding:25px;
+width:280px;
+text-align:center;
+cursor:pointer;
+}
+.card:hover{border-color:#ff3c00;transform:scale(1.05)}
+.btn{
+background:#ff3c00;
+color:white;
+padding:12px;
+border:none;
+border-radius:10px;
+width:100%;
+margin-top:15px;
+font-size:18px;
+cursor:pointer;
+}
+h1{text-align:center;text-shadow:2px 2px 4px #000}
 </style>
 </head>
 <body>
-<div id="bg"></div>
-<div id="popup"><h2>This Is For PS4 FW 9.xx</h2><button id="ok" onclick="go()">موافق</button></div>
-<div id="name">صالة عمر نينو - 07701690121</div>
+<div class="overlay">
+<h1>🏴‍☠️ صالة عمر نينو - PS4 9.00 🏴‍☠️</h1>
+<div class="versions">
+<div class="card" onclick="selectVersion('latest')">
+<h2>GoldHEN Latest</h2>
+<p>احدث نسخة - بيها كل المميزات الجديدة</p>
+<button class="btn">[ SELECT ]</button>
+</div>
+<div class="card" onclick="selectVersion('stable')">
+<h2>GoldHEN Stable</h2>
+<p>نسخة مستقرة - للشغل اليومي بالصالة</p>
+<button class="btn">[ SELECT ]</button>
+</div>
+</div>
+</div>
 <script>
-function go(){window.location.href="index.html";}
-setTimeout(function(){document.getElementById('popup').style.display='block';},1500);
+function selectVersion(v){
+localStorage.setItem('goldhen_version',v);
+window.location.href='./index.html';
+}
 </script>
 </body>
 </html>
